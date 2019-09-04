@@ -1,12 +1,20 @@
 /*Remove header functionality area for printing*/
 @media print {
-  .main-selection-area {
-    display: none
-  }
+  
+    /* Remove the selection header */
+    .main-selection-area {
+      display: none
+    }
 
-  /* Print back ground images */
-  * {
-    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
-  }
+    /* Print back ground images */
+    * {
+      -webkit-print-color-adjust: exact;   /* Chrome, Safari */
+    }
+
+    /* Remove the selection header
+    .printable-area:before {
+        content: url('../images/materia-medica-2.jpg');
+    }*/
+
 }
 
