@@ -5,6 +5,7 @@
 }
 
 <div class="main-selection-area">
+    
     <!-- Here is where the text box for the species name and the check boxes for the toggles will go -->
     Botanical Name: <input type="text" id="tree-name" placeholder="Enter botanical name here..."><br>
     Common Name: <input type="text" id="common-name" placeholder="Enter common name here..."><br>
@@ -24,114 +25,114 @@
     <!-- Invasive?: <input type="checkbox" id="invasive-select" value="Invasive"><br> -->
 </div>
 
-<div class="printable-area">
+  <div class="printable-area">
 
     <div class="header-wrapper">
-        <div class="selected-header-details">
-            <h1 id="display-tree-name"></h1>
-            <h3 id="display-common-name"></h3>
-            <h4 id="tree-details"></h4>
-        </div>
+      <div class="selected-header-details">
+        <h1 id="display-tree-name"></h1>
+        <h3 id="display-common-name"></h3>
+        <h4 id="tree-details"></h4>
+      </div>
 
-        <div id="letter-container">
-            <div id="first-letter-capitalized">
-                <!-- I will be filled programatically -->
-            </div>
+      <div id="letter-container">
+        <div id="first-letter-capitalized">
+          <!-- I will be filled programatically -->          
         </div>
+      </div>
     </div>
 
     <div class="central-section-wrapper">
 
-        <div class="main-content-wrapper">
+      <div class="main-content-wrapper">
 
-            <!-- Image 1 -->
-            <div class="input-container">
-                <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
-                    <form class="image-form">
-                        <input class="hide-element" type="file" multiple accept="image/*">
-                        <img class="uploaded-image" src="" alt="Drag Image Here...">
-                    </form>
-                </div>
+        <!-- Image 1 -->
+        <div class="input-container"> 
+          <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
+            <form class="image-form">
+              <input class="hide-element" type="file" multiple accept="image/*">    
+              <img class="uploaded-image" src="" alt="Drag Image Here...">
+            </form>
+          </div>
 
-                <div class="data-entry text-container">
-                    <div class="text-entry" contenteditable=""></div>
-                </div>
-            </div>
-
-            <!-- Image 2 -->
-            <div class="input-container">
-                <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
-                    <form class="image-form">
-                        <input class="hide-element" type="file" multiple accept="image/*">
-                        <img class="uploaded-image" src="" alt="Drag Image Here...">
-                    </form>
-                </div>
-
-                <div class="data-entry text-container">
-                    <div class="text-entry" contenteditable=""></div>
-                </div>
-            </div>
-
-            <!-- Image 3 -->
-            <div class="input-container">
-                <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
-                    <form class="image-form">
-                        <input class="hide-element" type="file" multiple accept="image/*">
-                        <img class="uploaded-image" src="" alt="Drag Image Here...">
-                    </form>
-                </div>
-
-                <div class="data-entry text-container">
-                    <div class="text-entry" contenteditable=""></div>
-                </div>
-            </div>
-
-            <!-- Image 4 -->
-            <div class="input-container">
-                <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
-                    <form class="image-form">
-                        <input class="hide-element" type="file" multiple accept="image/*">
-                        <img class="uploaded-image" src="" alt="Drag Image Here...">
-                    </form>
-                </div>
-
-                <div class="data-entry text-container">
-                    <div class="text-entry" contenteditable=""></div>
-                </div>
-            </div>
-
-            <!-- Image 5 -->
-            <div class="input-container">
-                <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
-                    <form class="image-form">
-                        <input class="hide-element" type="file" multiple accept="image/*">
-                        <img class="uploaded-image" src="" alt="Drag Image Here...">
-                    </form>
-                </div>
-
-                <div class="data-entry text-container">
-                    <div class="text-entry" contenteditable=""></div>
-                </div>
-            </div>
-
+          <div class="data-entry text-container">
+            <div class="text-entry" contenteditable=""></div>
+          </div>
         </div>
 
-        <div class="side-bar-wrapper">
+        <!-- Image 2 -->
+        <div class="input-container"> 
+          <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
+            <form class="image-form">
+              <input class="hide-element" type="file" multiple accept="image/*">    
+              <img class="uploaded-image" src="" alt="Drag Image Here...">
+            </form>
+          </div>
 
-            <div class="plant-information-flags">
-                <h1 class="vertical-text" id="nativity"></h1>
-            </div>
-
-            <div class="plant-information-flags">
-                <h1 class="vertical-text" id="dominance"></h1>
-            </div>
-
-            <!--         <div class="plant-information-flags">
-                      <h1 class="vertical-text" id="invasiveness"></h1>
-                    </div> -->
-
+          <div class="data-entry text-container">
+            <div class="text-entry" contenteditable=""></div>
+          </div>
         </div>
 
+        <!-- Image 3 -->
+        <div class="input-container"> 
+          <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
+            <form class="image-form">
+              <input class="hide-element" type="file" multiple accept="image/*">    
+              <img class="uploaded-image" src="" alt="Drag Image Here...">
+            </form>
+          </div>
+
+          <div class="data-entry text-container">
+            <div class="text-entry" contenteditable=""></div>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="input-container"> 
+          <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
+            <form class="image-form">
+              <input class="hide-element" type="file" multiple accept="image/*">    
+              <img class="uploaded-image" src="" alt="Drag Image Here...">
+            </form>
+          </div>
+
+          <div class="data-entry text-container">
+            <div class="text-entry" contenteditable=""></div>
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="input-container"> 
+          <div id="drop-area" class="img-drop-area data-entry image-entry dash-border">
+            <form class="image-form">
+              <input class="hide-element" type="file" multiple accept="image/*">    
+              <img class="uploaded-image" src="" alt="Drag Image Here...">
+            </form>
+          </div>
+
+          <div class="data-entry text-container">
+            <div class="text-entry" contenteditable=""></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="side-bar-wrapper">
+
+        <div class="plant-information-flags">
+          <h1 class="vertical-text" id="nativity"></h1>
+        </div>
+        
+        <div class="plant-information-flags">
+          <h1 class="vertical-text" id="dominance"></h1>      
+        </div>
+
+        <!--<div class="plant-information-flags">
+          <h1 class="vertical-text" id="invasiveness"></h1>
+        </div> -->
+
+      </div>
+    
     </div>
 
-</div>
+  </div>
