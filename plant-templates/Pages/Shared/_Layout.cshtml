@@ -21,30 +21,40 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
 
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-page="/Index" class="navbar-brand">plant_templates</a>
+    <!--
+        Removing navbar for now, since the page was set up with
+        some absolute assumptions in mind
+    -->
+    <!--
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-page="/Index" class="navbar-brand">plant_templates</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-page="/Index">Home</a></li>
+                        <li><a asp-page="/About">About</a></li>
+                        <li><a asp-page="/Contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    -->
 
-    <partial name="_CookieConsentPartial" />
-
+    <!--
+        commenting out, like won't use but I guess it may be helpful
+        displays the buttons to agree to cookies
+    -->
+    <!--<partial name="_CookieConsentPartial" />-->
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
