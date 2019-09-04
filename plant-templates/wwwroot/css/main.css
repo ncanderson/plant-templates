@@ -11,21 +11,26 @@ html {
     height: 1312px;
     width: 1030px;
     border: 1px solid black;
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     background-image: url('../images/materia-medica-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center
+    background-position: center center;
+
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
-/*.printable-area .background-image-tag {
+.printable-area .background-image-tag {
     pointer-events: none;
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
-}*/
+}
 
 img {
     color: #000;
