@@ -1,0 +1,13 @@
+.plant-information-flags {
+  display: flex;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.vertical-text {
+  transform: rotate(90deg);
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 10px;
+}

@@ -1,0 +1,74 @@
+/* Box sizing reset */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.printable-area {
+  height: 1312px;
+  width: 1030px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/materia-medica-2.jpg');
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+img {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 250px;
+}
+
+h1 {
+  font-weight:bold;
+  font-family: "Verdana";
+}
+
+h3 {
+  font-weight:bold;
+  font-family: "Verdana";
+}
+
+h4 {
+  font-weight: bold;
+  font-family: "Helvetica";
+}
+
+.hide-element {
+  display: none !important;
+}
+
+.header-wrapper {
+  height: 10%;
+  display: flex;
+  flex-direction: row;  
+}
+
+.central-section-wrapper {
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+}
+
+.side-bar-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;  
+  flex: 1 0 8%;
+}
+
+.main-content-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 7 1 auto;
+  min-width: 0;
+}
+

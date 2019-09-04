@@ -1,0 +1,12 @@
+/*Remove header functionality area for printing*/
+@media print {
+  .main-selection-area {
+    display: none
+  }
+
+  /* Print back ground images */
+  * {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+  }
+}
+
