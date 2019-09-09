@@ -1,4 +1,26 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿$(document).ready(function() {
 
-// Write your Javascript code.
+    console.log('on init');
+
+    $.ajax({
+        type: "POST",
+        url: "../FeedGeneratorService.svc/JSON/Session",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(data),
+        dataType: "json",
+        processData: true,
+        success: function (data, textStatus, xhr) {
+            if (data.isUser) {
+                $("#loginContainer").hide();
+                $("#root").show();
+                $(".hiddenButton").show();
+            }
+            else {
+                DevExpress.ui.dialog.alert('Username or Password are incorrect, please try again', 'Invalid Credentials');
+            }
+        },
+        error: function (xhr) {
+        }
+    });
+
+});
