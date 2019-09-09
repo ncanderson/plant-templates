@@ -1,26 +1,21 @@
 ﻿$(document).ready(function() {
 
-    console.log('on init');
 
-    $.ajax({
-        type: "POST",
-        url: "../FeedGeneratorService.svc/JSON/Session",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(data),
-        dataType: "json",
-        processData: true,
-        success: function (data, textStatus, xhr) {
-            if (data.isUser) {
-                $("#loginContainer").hide();
-                $("#root").show();
-                $(".hiddenButton").show();
+        $.ajax({  
+            type: "GET",  
+            url: "/api/home",
+            contentType: "application/json; charset=utf-8",  
+            dataType: "json",  
+            success: function () {  
+                console.log('here');
+                console.log('are we serious?');
+            },
+            failure: function (data) {  
+                console.log('fail');
+            },
+            error: function (data) {
+                console.log('error');
             }
-            else {
-                DevExpress.ui.dialog.alert('Username or Password are incorrect, please try again', 'Invalid Credentials');
-            }
-        },
-        error: function (xhr) {
-        }
-    });
+        });
 
 });
