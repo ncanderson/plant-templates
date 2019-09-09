@@ -17,7 +17,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        @*This setup includes Herkou as a non-dev environment*@
         @*<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />*@
+        <link rel="stylesheet" href="~/css/print.css" />
+        <link rel="stylesheet" href="~/css/main.css" />
+        <link rel="stylesheet" href="~/css/data-entry-row.css" />
+        <link rel="stylesheet" href="~/css/header-area.css" />
+        <link rel="stylesheet" href="~/css/side-bar-column.css" />
     </environment>
 </head>
 <body>
@@ -78,7 +84,16 @@
                 crossorigin="anonymous"
                 integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        @*<script src="~/js/site.min.js" asp-append-version="true"></script>*@
+        @*Heroku counts as non-dev, so this framework is including 
+        all scripts here when on heroku*@
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/header-functionality.js" asp-append-version="true"></script>
+        <script src="~/js/image-drop.js" asp-append-version="true"></script>
+        <script src="~/js/text-edit.js" asp-append-version="true"></script>
+
     </environment>
 
     @RenderSection("Scripts", required: false)
