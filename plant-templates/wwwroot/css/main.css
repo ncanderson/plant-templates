@@ -9,19 +9,14 @@ html {
 
 .printable-area {
     height: 1312px;
-    width: 1030px;
+    width: 1045px;
     border: 1px solid black;
-    /*display: flex;*/
+    display: flex;
     flex-direction: column;
     background-image: url('../images/materia-medica-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
-
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+    background-position: center center
 }
 
 /*.printable-area .background-image-tag {
