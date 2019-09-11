@@ -77,7 +77,9 @@ $(document).ready(function() {
     // Check for un-modified boxes
     if ($('#nativity-select').val() === 'default' ||
       $('#nativity-select').val() === "") {
-      alert('You forgot to select "Native", "Non-Native" or "Invasive" you turkey!');
+
+        //alert('You forgot to select "Native", "Non-Native" or "Invasive" you turkey!');
+
     }
 
     // Check for non-modified containers

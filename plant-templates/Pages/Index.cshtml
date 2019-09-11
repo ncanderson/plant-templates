@@ -2,41 +2,74 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-}
+}   
 
+@*I will be above the printable area*@
 <div class="main-selection-area">
-    
-    <!-- Here is where the text box for the species name and the check boxes for the toggles will go -->
-    Botanical Name: <input type="text" id="tree-name" placeholder="Enter botanical name here..."><br>
-    Common Name: <input type="text" id="common-name" placeholder="Enter common name here..."><br>
-    Nativity: <select name="" id="nativity-select">
-        <option hidden value="default">Select An Option...</option>
-        <option value=""></option>
-        <option value="Native">Native</option>
-        <option value="Non-Native">Non-Native</option>
-        <option value="Invasive">Invasive</option>
-    </select><br>
-    Dominance: <select name="" id="dominance-select">
-        <option hidden value="default">Select An Option...</option>
-        <option value=""></option>
-        <option value="Non-Dominant">Non-Dominant</option>
-        <option value="Dominant">Dominant</option>
-    </select><br>
-    <!-- Invasive?: <input type="checkbox" id="invasive-select" value="Invasive"><br> -->
+
+    <div class="input-area-group-one">
+
+        <!-- Week Selector-->
+        Select Week: <select name="" id="week-selector"></select>
+        <button type="button" id="new-week-button">Add New Week</button>
+        <br>
+        <!-- Here is where the text box for the species name and the check boxes for the toggles will go -->
+        Botanical Name:
+        <input type="text" id="tree-name" placeholder="Enter botanical name here...">
+        <br>
+        Common Name:
+        <input type="text" id="common-name" placeholder="Enter common name here...">
+        <br>
+        Nativity:
+        <select name="" id="nativity-select">
+            <option hidden value="default">Select An Option...</option>
+            <option value=""></option>
+            <option value="Native">Native</option>
+            <option value="Non-Native">Non-Native</option>
+            <option value="Invasive">Invasive</option>
+        </select>
+        <br>
+        Dominance:
+        <select name="" id="dominance-select">
+            <option hidden value="default">Select An Option...</option>
+            <option value=""></option>
+            <option value="Non-Dominant">Non-Dominant</option>
+            <option value="Dominant">Dominant</option>
+        </select>
+
+        <br>
+
+    </div>
+
+    <div class="input-area-group-two">
+
+        TEST    
+
+    </div>
+
 </div>
 
+@*Please break me*@
 <div class="printable-area">
 
-    @*<img class="background-image-tag" src="../images/materia-medica-2.jpg" />*@
+    <img src="../images/materia-medica-2.jpg" class="background-image" alt="" />
 
     <div class="header-wrapper">
+
+
         <div class="selected-header-details">
+
+            <img src="../images/big-white.png" class="chrome-print-workaround" alt="" />
+    
             <h1 id="display-tree-name"></h1>
             <h3 id="display-common-name"></h3>
             <h4 id="tree-details"></h4>
         </div>
 
         <div id="letter-container">
+
+            <img src="../images/big-white.png" class="chrome-print-workaround" alt="" />
+
             <div id="first-letter-capitalized">
                 <!-- I will be filled programatically -->
             </div>
@@ -57,7 +90,11 @@
                 </div>
 
                 <div class="data-entry text-container">
+
+                    <img src="../images/big-white.png" class="chrome-print-workaround" alt="" />
+
                     <div class="text-entry" contenteditable=""></div>
+
                 </div>
             </div>
 
@@ -71,7 +108,11 @@
                 </div>
 
                 <div class="data-entry text-container">
+
+                    <img src="../images/big-white.png" class="chrome-print-workaround" alt="" />
+
                     <div class="text-entry" contenteditable=""></div>
+
                 </div>
             </div>
 
@@ -85,7 +126,11 @@
                 </div>
 
                 <div class="data-entry text-container">
+
+                    <img src="../images/big-white.png" class="chrome-print-workaround" alt="" />
+
                     <div class="text-entry" contenteditable=""></div>
+
                 </div>
             </div>
 
@@ -99,7 +144,11 @@
                 </div>
 
                 <div class="data-entry text-container">
+
+                    <img src="../images/big-white.png" class="chrome-print-workaround" alt="" />
+
                     <div class="text-entry" contenteditable=""></div>
+
                 </div>
             </div>
 
@@ -113,7 +162,11 @@
                 </div>
 
                 <div class="data-entry text-container">
+
+                    <img src="../images/big-white.png" class="chrome-print-workaround" alt="" />
+
                     <div class="text-entry" contenteditable=""></div>
+
                 </div>
             </div>
 
@@ -136,5 +189,4 @@
         </div>
 
     </div>
-
 </div>

@@ -1,10 +1,13 @@
+
 #letter-container {
-  flex: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  border: 5px solid black;
-  background-color: white;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 5px solid black;
+    background-color: white;
+    
+    position: relative;
 }
 
 #first-letter-capitalized {
@@ -17,6 +20,8 @@
   background-color: white;
   margin:10px;  
   padding:10px 10px 10px 20px;
+  overflow: hidden;
+  position: relative;
 }
 
 #display-tree-name {
