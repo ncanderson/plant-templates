@@ -3,12 +3,11 @@
     // Load all weeks by default on page load       
     $.ajax({  
         type: "GET",  
-        url: "/api/home",
+        url: "/api/home/GetAllWeeks",
         contentType: "application/json; charset=utf-8",  
         dataType: "json",  
-        success: function () {  
-            console.log('here');
-            console.log('are we serious?');
+        success: function (data) {  
+            console.log(data);
         },
         failure: function (data) {  
             console.log('fail');

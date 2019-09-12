@@ -1,0 +1,62 @@
+
+Generate SQL
+CREATE TABLE User
+(
+  User_id NODATATYPE NOT NULL,
+  NameUser INT NOT NULL,
+  LoginUser INT NOT NULL,
+  EmailUser INT NOT NULL,
+  PasswordHash INT NOT NULL,
+  PasswordSalt INT NOT NULL,
+  date_created INT NOT NULL,
+  date_last_logged_in INT NOT NULL,
+  PRIMARY KEY (User_id)
+);
+
+CREATE TABLE Attribute
+(
+  Attribute_id INT NOT NULL,
+  description INT NOT NULL,
+  PRIMARY KEY (Attribute_id)
+);
+
+CREATE TABLE Sheet
+(
+  Sheet_id INT NOT NULL,
+  date_created INT NOT NULL,
+  created_by NODATATYPE NOT NULL,
+  PRIMARY KEY (Sheet_id),
+  FOREIGN KEY (created_by) REFERENCES User(User_id)
+);
+
+CREATE TABLE Week
+(
+  Week_Id INT NOT NULL,
+  Description INT NOT NULL,
+  date_created INT NOT NULL,
+  created_by NODATATYPE NOT NULL,
+  PRIMARY KEY (Week_Id),
+  FOREIGN KEY (created_by) REFERENCES User(User_id)
+);
+
+CREATE TABLE SheetAttribute
+(
+  Attribute_Value INT NOT NULL,
+  date_created INT NOT NULL,
+  Sheet_id INT NOT NULL,
+  Attribute_id INT NOT NULL,
+  created_by NODATATYPE NOT NULL,
+  PRIMARY KEY (Sheet_id, Attribute_id),
+  FOREIGN KEY (Sheet_id) REFERENCES Sheet(Sheet_id),
+  FOREIGN KEY (Attribute_id) REFERENCES Attribute(Attribute_id),
+  FOREIGN KEY (created_by) REFERENCES User(User_id)
+);
+
+CREATE TABLE SheetWeek
+(
+  Week_Id INT NOT NULL,
+  Sheet_id INT NOT NULL,
+  PRIMARY KEY (Week_Id, Sheet_id),
+  FOREIGN KEY (Week_Id) REFERENCES Week(Week_Id),
+  FOREIGN KEY (Sheet_id) REFERENCES Sheet(Sheet_id)
+);

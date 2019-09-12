@@ -8,15 +8,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace plant_templates.Controllers
 {
-    [Route("api/home")]
+    [Route("api/[controller]/[action]")]
+    //[RoutePrefix("api/{controller}/{action}")]
     [ApiController]
     public class HomeController : Controller
     {
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<string> GetAllWeeks()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "please", "work" };
         }
 
         // GET api/<controller>/5
