@@ -10,8 +10,24 @@
     <div class="input-area-group-one">
 
         <!-- Week Selector-->
-        Select Week: <select name="" id="week-selector"></select>
+        Select Week: <select name="" id="week-selector"><option></option></select>
         <button type="button" id="new-week-button">Add New Week</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Enter details for a new week of sheets:</h2>
+                Week Name:
+                <input type="text" id="week-name" placeholder="Enter week name (Portfolio Sheets 2019/09/19 etc)...">
+                <br>
+                <button type="button" id="save-new-week">Submit New Week</button>
+            </div>
+
+        </div>
+
         <br>
         <!-- Here is where the text box for the species name and the check boxes for the toggles will go -->
         Botanical Name:

@@ -1,19 +1,36 @@
-create or replace function fn_get_all_weeks ()
-returns table (
-	week_id uuid,
-    description varchar,
-    date_created timestamp
-)	
-as $$
+-- FUNCTION: plant_templates_test.fn_get_all_weeks()
+
+-- DROP FUNCTION plant_templates_test.fn_get_all_weeks();
+
+CREATE OR REPLACE FUNCTION plant_templates_test.fn_get_all_weeks(
+	)
+    RETURNS json
+    LANGUAGE 'plpgsql'
+
+    COST 100
+    VOLATILE 
+    ROWS 1000
+AS $BODY$
+
 begin
 	
     return query
     select 
-    	w.week_id,
-        w.description,
-        w.date_created
-    from week w
-    order by date_created desc;
+        json_agg(data) as record
+    FROM (
+        select 
+            w.week_id,
+            w.description,
+            w.date_created
+        from week w
+        order by date_created desc
+    ) data;
+
+
 
 end
-$$ language plpgsql;
+
+$BODY$;
+
+ALTER FUNCTION plant_templates_test.fn_get_all_weeks()
+    OWNER TO postgres;
